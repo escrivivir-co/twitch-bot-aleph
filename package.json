@@ -1,0 +1,24 @@
+{
+  "name": "twitch-bot-aleph",
+  "version": "1.0.0",
+  "description": "Un bot para twitch que entre otras tenga un game cadaver-exquisito",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tmi.js": "^1.8.5"
+  },
+  "tokens": {
+    "identity": {
+      "username": "<BOT_USERNAME>",
+      "password": "<OAUTH_TOKEN>"
+    },
+    "channels": [
+      "<CHANNEL_NAME>"
+    ]
+  }
+}
