@@ -39,4 +39,10 @@ Yo, cosas de arte, :-D ¡¡Bieeeen!!!!
 
 # Bot
 
-![Docs oficiales desarrollo](https://dev.twitch.tv/docs/irc/get-started/#initialize-and-install-the-package)
+[Docs oficiales desarrollo](https://dev.twitch.tv/docs/irc/get-started/#initialize-and-install-the-package)
+[Console](https://dev.twitch.tv/console)
+
+
+
+[Connect with Twitch](https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=20lg65xfbp4n6uk6jtf2o3fu1bu7i7&redirect_uri=http://localhost:3000&scope=chat%3Aread+chat%3Aedit)
+

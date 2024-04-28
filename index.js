@@ -1,4 +1,9 @@
+const tmi = require('tmi.js');
+const DiscordianDate = require('discordian-date');
+const env = require('./package.json')
+const opts = env.tokens;
 
+const botName = opts.identity.username;
 // Create a client with our options
 const client = new tmi.client(opts);
 
@@ -11,6 +16,7 @@ client.connect();
 
 // Called every time a message comes in
 function onMessageHandler (target, context, msg, self) {
+
   if (self) { return; } // Ignore messages from the bot
 
   // Remove whitespace from chat message
@@ -19,7 +25,13 @@ function onMessageHandler (target, context, msg, self) {
   // If the command is known, let's execute it
   if (commandName === '!dice') {
     const num = rollDice();
-    client.say(target, `You rolled a ${num}`);
+
+    client.say(target, `${botName}:> You rolled a ${num}`);
+    console.log(`* Executed ${commandName} command`);
+  } else if (commandName === '!ddate') {
+    const d = new DiscordianDate();
+    // const f = `Today is Pungenday, the ${d.day}th day of ${d.season} in the YOLD ${d.year}`;
+    client.say(target, `${botName}:> ${DiscordianDate.today()}`);
     console.log(`* Executed ${commandName} command`);
   } else {
     console.log(`* Unknown command ${commandName}`);
